@@ -17,6 +17,10 @@ const nextConfig = {
   trailingSlash: true,
   basePath: isCI ? `/${repo}` : "",
   assetPrefix: isCI ? `/${repo}/` : "",
+  // Exposé au client pour préfixer les images de public/ (next/image ne le fait pas)
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isCI ? `/${repo}` : "",
+  },
   // Fixe la racine sur ce dossier (un autre lockfile existe dans le dossier parent)
   turbopack: {
     root: __dirname,

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { FiChevronLeft, FiChevronRight, FiX } from "react-icons/fi";
+import { asset } from "@/lib/utils";
 
 type Slide = { src: string; label: string };
 
@@ -60,7 +61,7 @@ export function Gallery({ slides }: { slides: readonly Slide[] }) {
         {slides.map((s, k) => (
           <Image
             key={s.src}
-            src={s.src}
+            src={asset(s.src)}
             alt={`Aperçu — ${s.label}`}
             fill
             sizes="(max-width: 1024px) 100vw, 560px"
@@ -163,7 +164,7 @@ export function Gallery({ slides }: { slides: readonly Slide[] }) {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={current.src}
+                    src={asset(current.src)}
                     alt={current.label}
                     className="max-h-[82vh] w-auto rounded-xl object-contain shadow-2xl ring-1 ring-white/10"
                     draggable={false}

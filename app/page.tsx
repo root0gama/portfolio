@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { profile } from "@/data/profile";
+import { asset } from "@/lib/utils";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { BentoCard } from "@/components/BentoCard";
 import { LocalTime } from "@/components/LocalTime";
@@ -212,7 +213,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-36">
                     <Image
-                      src={caseStudy.image}
+                      src={asset(caseStudy.image)}
                       alt={`Aperçu — ${caseStudy.title}`}
                       fill
                       sizes="(max-width: 1024px) 100vw, 440px"
@@ -287,7 +288,7 @@ export default function Home() {
                 </div>
                 <div className="relative aspect-[16/10] w-full">
                   <Image
-                    src={featured.image}
+                    src={asset(featured.image)}
                     alt={`Aperçu — ${featured.title}`}
                     fill
                     priority
