@@ -68,7 +68,6 @@ export const profile = {
       description:
         "Bot Discord reprenant les mécaniques des jeux Pokémon officiels.",
       image: "/kokwak.png",
-      link: "https://github.com/root0gama/autre-projet",
       tags: ["Discord", "Node.js"],
     },
   ],

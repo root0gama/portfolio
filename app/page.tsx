@@ -203,12 +203,7 @@ export default function Home() {
 
             {/* slot 3 — Étude de cas / capture (≈ PostCard) */}
             <BentoCard index={2} pad="p-4">
-              <a
-                href={caseStudy.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block"
-              >
+              <div className="block">
                 <div className="overflow-hidden rounded-xl border border-[var(--color-border)]">
                   <div className="flex h-6 items-center gap-1.5 bg-white/5 px-3">
                     <span className="h-2 w-2 rounded-full bg-zinc-600" />
@@ -229,12 +224,11 @@ export default function Home() {
                   <p className="text-[15px] font-medium text-zinc-100">
                     {caseStudy.title}
                   </p>
-                  <Arrow className="text-zinc-500 group-hover:text-white" />
                 </div>
                 <p className="mt-1 line-clamp-2 text-sm text-zinc-400">
                   {caseStudy.description}
                 </p>
-              </a>
+              </div>
             </BentoCard>
 
             {/* slot 4 — Ce que je fais (grille 6 ≈ BadgesCard) */}
