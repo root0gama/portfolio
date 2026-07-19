@@ -4,6 +4,7 @@ import { asset } from "@/lib/utils";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { BentoCard } from "@/components/BentoCard";
 import { LocalTime } from "@/components/LocalTime";
+import { ViewCounter } from "@/components/ViewCounter";
 import { Gallery } from "@/components/Gallery";
 import { TextMarquee } from "@/components/ui/text-marquee";
 import {
@@ -101,7 +102,8 @@ export default function Home() {
             <span className="h-6 w-6 rounded-lg bg-gradient-to-br from-white to-zinc-600" />
             /u/<span className="text-zinc-100">{handle}</span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-2">
+            <ViewCounter />
             <a
               href={`mailto:${email}`}
               className="group inline-flex items-center gap-1.5 rounded-xl border border-[var(--color-border)] bg-white/5 px-3.5 py-2 text-xs font-bold text-zinc-100 transition-colors hover:border-white/25 hover:bg-white/10"
